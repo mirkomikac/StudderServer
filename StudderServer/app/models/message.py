@@ -12,6 +12,6 @@ class Message(models.Model):
     time = models.DateTimeField();
     readStatus = models.SmallIntegerField();
 
-    match = models.ForeignKey(Match);
-    sender = models.ForeignKey(User);
+    match = models.ForeignKey(Match, on_delete = models.CASCADE);
+    sender = models.ForeignKey(User, on_delete = models.CASCADE);
 

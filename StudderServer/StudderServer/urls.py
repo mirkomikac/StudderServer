@@ -19,7 +19,9 @@ urlpatterns = [
     # Examples:
     url(r'^$', app.views.home, name='home'),
     url(r'^contact$', app.views.contact, name='contact'),
-    url(r'^getUser/(?P<pk>[0-9]+)$', app.controllers.userController.getUser, name='home'),
+    url(r'^user/(?P<pk>[0-9]+)$', app.controllers.userController.userOne),
+    url(r'^user$', app.controllers.userController.userAll),
+    url(r'^userAdd/', app.controllers.userController.userAdd),
     url(r'^about', app.views.about, name='about'),
     url(r'^login/$',
         django.contrib.auth.views.login,
